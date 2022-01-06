@@ -21,7 +21,6 @@ public class C01_Hardassertion {
     // url'in amazon icerdigini test edin
     // title'in amazon icerdigini test edin
     // java kelimesi aratin ve listedeki ilk urunun java kelimesi icerdigini test edin
-    // testleri soft assertion ile yapin
 
     WebDriver driver;
     @BeforeClass

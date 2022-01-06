@@ -65,7 +65,7 @@ import org.testng.annotations.Test;
 
             SoftAssert softAssert=new SoftAssert();
 
-            softAssert.assertEquals(actualData,expectedValue,"seilen option Euro Zone degil");
+            softAssert.assertEquals(actualData,expectedValue,"secilen option Euro Zone degil");
 
 
             // 10. soft assert kullanarak DropDown listesinin su secenekleri oldugunu test edin

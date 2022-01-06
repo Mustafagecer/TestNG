@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class C04_SoftAssert_HepsiBurada {
     // Yeni bir Class Olusturun : D11_SoftAssert1
     //“https://www.hepsiburada.com/” Adresine gidin
-    //Basliginin “Turkiye’nin En Buyuk Alisveris Sitesi" icerdigini dogrulayin
+    //Basliginin “Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com" icerdigini dogrulayin
     //search kutusuna araba yazip arattirin
     //bulunan sonuc sayisini yazdirin
     //sonuc yazisinin "araba" icerdigini dogrulayin
