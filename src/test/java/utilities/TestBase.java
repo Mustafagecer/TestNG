@@ -3,6 +3,7 @@ package utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -12,7 +13,7 @@ public abstract class TestBase {
 
     // abstract yaparak bu class'dan obje olusturulmasinin onune geceriz
 
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
     // biz test base class'i sadece extends ile inherit ederek kullanacagiz
     // dolayisiyla olusturdugumuz driver variable'i icin protected access modifier'i seciyoruz
@@ -24,10 +25,11 @@ public abstract class TestBase {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
+
     }
     @AfterClass
     public void tearDown() throws InterruptedException {
         Thread.sleep(3000);
-        driver.quit();
+        //driver.quit();
     }
 }
