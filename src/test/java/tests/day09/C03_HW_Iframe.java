@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 public class C03_HW_Iframe {
 
@@ -21,7 +22,7 @@ public class C03_HW_Iframe {
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://the-internet.herokuapp.com/iframe");
     }
 

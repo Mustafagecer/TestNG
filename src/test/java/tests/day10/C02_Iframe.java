@@ -1,4 +1,4 @@
-package tests.day09;
+package tests.day10;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

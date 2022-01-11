@@ -26,26 +26,30 @@ public class practice_demoqa_forms extends TestBase {
                 .sendKeys(Keys.TAB).sendKeys(Keys.SPACE).perform();
 
         WebElement chooseFile=driver.findElement(By.id("uploadPicture"));
-        String pathOfFile="C:\\Users\\Acer\\Desktop\\1.JPG";
+        String pathOfFile="C:\\Users\\Acer\\Desktop\\lehrkraft\\photo.jpg";
 
         chooseFile.sendKeys(pathOfFile);
+        actions.sendKeys(Keys.ENTER).perform();
         Thread.sleep(2000);
 
+        /*
         driver.findElement(By.xpath("//*[@id=\"currentAddress\"]")).sendKeys("Sokak cadde Sehir");
                 actions.sendKeys(Keys.TAB).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER)
                 .sendKeys(Keys.TAB).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER)
-                .sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
-               /* .sendKeys(Keys.TAB).sendKeys(Keys.SPACE)
+                .sendKeys(Keys.TAB).sendKeys(Keys.ENTER)
+                .sendKeys(Keys.TAB).sendKeys(Keys.SPACE)
                 .sendKeys(Keys.TAB).sendKeys(Keys.ENTER)
                 .sendKeys("C:\\Users\\Acer\\Desktop\\1.JPG").click()
                 .sendKeys(Keys.TAB).sendKeys("Ali Veli")
                 .sendKeys(Keys.TAB).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER)
                 .sendKeys(Keys.TAB).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER)
-                .sendKeys(Keys.TAB).sendKeys(Keys.ENTER)
+                .sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+
+
+         */
 
 
 
-                 */
 
     }
 
