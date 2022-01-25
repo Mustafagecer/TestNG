@@ -19,16 +19,16 @@ public class Trendyol extends TestBase {
     @Test
     public void newTest() throws IOException, InterruptedException {
 
-        driver.get("https://www.trendyol.com/");
-        String trendyolHandle = driver.getWindowHandle();
+        driver.get("https://www.ebay.com/");
+        String ebayHandle = driver.getWindowHandle();
         //driver.findElement(By.xpath("//span[@class='homepage-popup-gender']")).click();
-        driver.findElement(By.xpath("//input[@class='search-box']")).sendKeys("iPhone 13" + Keys.ENTER);
-        String price = driver.findElement(By.xpath("(//div[@class='prc-box-dscntd'])[1]")).getText();
+        driver.findElement(By.xpath("//input[@id='gh-ac']")).sendKeys("iPhone 13" + Keys.ENTER);
+        String price = driver.findElement(By.xpath("(//span[@class='s-item__price'])[1]")).getText();
 
-        int priceAsInt = Integer.parseInt(price.substring(0, price.indexOf(",")).replaceAll("[^0-9]", ""));
+        int priceAsInt = Integer.parseInt(price.substring(0, price.indexOf(",")).replaceAll("$", ""));
 
         WebDriver newTab = driver.switchTo().newWindow(WindowType.TAB);
-        newTab.get("https://www.amazon.com.tr/");
+        newTab.get("https://www.amazon.com/");
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iPhone 13" + Keys.ENTER);
         String price2 = driver.findElement(By.xpath("(//span[@class='a-price-whole'])[2]")).getText();
         int price2AsInt = Integer.parseInt(price2.replaceAll("[^0-9]", ""));
@@ -36,7 +36,7 @@ public class Trendyol extends TestBase {
 
         if (priceAsInt < price2AsInt) {
 
-            driver.switchTo().window(trendyolHandle);
+          //  driver.switchTo().window(ebayHandle);
             Thread.sleep(5000);
             takeScreenShot();
 
@@ -44,7 +44,7 @@ public class Trendyol extends TestBase {
 
             System.out.println("Amazon is cheaper!");
         }
-
+/*
         driver.navigate().refresh();
         Thread.sleep(3000);
 
@@ -81,10 +81,12 @@ public class Trendyol extends TestBase {
 
         String pathOfImage = System.getProperty("user.home")+"/Desktop/2022.01.21.12.14.54.png";
         uploadButton.sendKeys(pathOfImage);
-
+ */
     }
 
-    public void takeScreenShot () {
+
+
+    public void takeScreenShot() {
 
         TakesScreenshot ts = (TakesScreenshot) driver;
         File image = ts.getScreenshotAs(OutputType.FILE);
